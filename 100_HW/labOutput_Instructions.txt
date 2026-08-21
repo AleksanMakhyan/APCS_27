@@ -1,0 +1,8 @@
+This is how to open the answer example for you to see what you're trying to build!
+
+- Open to the folder of the homework/lab that you're working on.
+- Right click the "labOutput" folder.
+- Select "Open Terminal Here"
+- In the terminal, write the java run command "java starter"
+	java is the run command, starter is the name of the class file (change it if it's different)
+This folder already has a compiled file with the answer solution.
