@@ -1,13 +1,68 @@
-/*
- *	Author:  
- *  Date: 
-*/
-
 import java.util.Scanner;
 
 class starter {
 	public static void main(String args[]) {
-		// Your code goes below here
-		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("=================================================");
+		System.out.println("            WELCOME RESTAURANT OWNER!            ");
+		System.out.println("=================================================");
+		System.out.println("What is the name of your restaurant?");
+		String restaurantName = sc.nextLine();
+		System.out.println("What is your name?");
+		String name = sc.nextLine();
+		System.out.println("Great to see you, " + name + "! Let's set up a menu for " + restaurantName + "! Tonight's menu has room for exactly 3 items. Let's go!");
+		System.out.println("--- Item #1 ---");
+		System.out.println("Item name: ");
+		String item1Name = sc.nextLine();
+		System.out.println("Price of " + item1Name + "($): ");
+		double item1Price = sc.nextDouble();
+		sc.nextLine();
+		System.out.println("How many " + item1Name + "'s would you like? ");
+		int item1Quantity = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Added " + item1Quantity + "x " + item1Name + " to your order! " + "($"+ (item1Price*item1Quantity) + ")");
+		System.out.println("--- Item #2 ---");
+		System.out.println("Item name: ");
+		String item2Name = sc.nextLine();
+		System.out.println("Price of " + item2Name + "($): ");
+		double item2Price = sc.nextDouble();
+		sc.nextLine();
+		System.out.println("How many " + item2Name + "'s would you like? ");
+		int item2Quantity = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Added " + item2Quantity + "x " + item2Name + " to your order! " + "($" + (item2Price*item2Quantity) + ")");
+		System.out.println("--- Item #3 ---");
+		System.out.println("Item name: ");
+		String item3Name = sc.nextLine();
+		System.out.println("Price of " + item3Name + "($): ");
+		double item3Price = sc.nextDouble();
+		sc.nextLine();
+		System.out.println("How many " + item3Name + "'s would you like? ");
+		int item3Quantity = sc.nextInt();
+		sc.nextLine();
+		System.out.println("Added " + item3Quantity + "x " + item3Name + " to your order! " + "($" + (item3Price*item3Quantity) + ")");
+		System.out.println("Nice choices! What tip percentage would you like to leave? (ex: 15, 18, 20): ");
+		double tippercentage = sc.nextDouble();
+		System.out.println("=================================================");
+		System.out.println("              " + restaurantName + " - Menu For Today              ");
+		System.out.println("=================================================");
+		System.out.println("Owner: " + name);
+		System.out.println("-------------------------------------------------");
+		System.out.println("Item                Qty     Price                 ");
+		System.out.println(item1Name + "               " + item1Quantity + "    " + item1Price);
+		System.out.println(item2Name + "              " + item2Quantity + "    " + item2Price);
+		System.out.println(item3Name + "               " + item3Quantity + "    " + item3Price);
+		System.out.println("-------------------------------------------------");
+		double subtotal = ((item1Quantity * item1Price) + (item2Quantity * item2Price) + (item3Quantity * item3Price));
+		System.out.println("Subtotal:                  " +(subtotal));
+		double taxpercent = 0.0975;
+		System.out.println("Tax (9.75%):               " + (subtotal)*(taxpercent));
+		double taxamount = (subtotal)*(taxpercent);
+		System.out.println("Tip:                       "+ tippercentage + "%");
+		System.out.println("Tip Amount:                " + ((tippercentage*0.01)*(subtotal)));
+		double tipamount = ((tippercentage*0.01)*(subtotal));
+		System.out.println("=================================================");
+		System.out.println("TOTAL:                    " + ((subtotal)+(taxamount)+(tipamount)));
+		System.out.println("=================================================");
 	}
 }
