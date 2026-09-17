@@ -15,5 +15,35 @@ class starter {
 		System.out.print("Please enter another integer: ");
 		int num2 = sc.nextInt();
 		sc.nextLine();
+
+		if (num1 % 2 == 0) {
+			System.out.println(num1 + " is an even number!");
+		} else {
+			System.out.println(num1 + " is an odd number!");
+		}
+		if (num2 % 2 ==0) {
+			System.out.println(num2 + " is an even number!");
+		} else {
+			System.out.println(num2 + " is an odd number!");
+		}
+		if (num1 % 3 == 0) {
+			System.out.println(num1 + " is divisible by 3!");
+		}
+		if (num1 % 4 == 0) {
+			System.out.println(num1 + " is divisible by 4!");
+		}
+		if (num1 % 5 == 0) {
+			System.out.println(num1 + " is divisible by 5!");
+		}
+		if (num2 % 3 == 0) {
+			System.out.println(num2 + " is divisible by 3!");
+		}
+		if (num2 % 4 == 0) {
+			System.out.println(num2 + " is divisible by 4!");
+		}
+		if (num2 % 5 == 0) {
+			System.out.println(num2 + " is divisible by 5!");
+		}
+
 	}
 }
