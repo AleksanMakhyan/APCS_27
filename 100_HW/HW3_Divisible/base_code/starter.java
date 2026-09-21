@@ -15,7 +15,7 @@ class starter {
 		System.out.print("Please enter another integer: ");
 		int num2 = sc.nextInt();
 		sc.nextLine();
-
+		System.out.println("");
 		if (num1 % 2 == 0) {
 			System.out.println(num1 + " is an even number!");
 		} else {
@@ -26,6 +26,7 @@ class starter {
 		} else {
 			System.out.println(num2 + " is an odd number!");
 		}
+		System.out.println("");
 		if (num1 % 3 == 0) {
 			System.out.println(num1 + " is divisible by 3!");
 		}
