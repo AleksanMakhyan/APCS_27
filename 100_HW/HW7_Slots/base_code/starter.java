@@ -42,8 +42,8 @@ class starter {
 				balance = balance * 3;
 				System.out.println("You tripled your money, your new balance is " + balance + "!");
 			} else {
-				balance = 0;
-				System.out.println("You lost all your money :( , come try again later! ");
+				balance = balance - wageramount;
+				System.out.println("You lost, here is how much money you have remaining: " + balance);
 			}
 			} else if (response.equalsIgnoreCase("no") || response.equalsIgnoreCase("n")) {
 				System.out.println("You decided to end the game, here is how much money was left! " + balance);
