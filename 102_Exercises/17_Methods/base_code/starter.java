@@ -8,13 +8,25 @@ import java.util.Random;
 
 
 class starter {
-	// The goal of the first method is to give back whether the year given is a leap year or not. 2004 is a leap year.
-
-	// The goal of the second method is to add all the digits of a number up. Ex: 12345 has a total of 15.
-
-	// The goal of the third method is to check if 3 numbers are consecutive. 15 16 17 are consecutive. It will print if they are or not.
-	// Assume that the first number is always the smallest and the third number is always the largest.
-
+	public static boolean isLeapYear(int year) {
+		return (year % 4 == 0);
+	}
+	public static int getDigitSum(int number) {
+		int numsum = 0;
+		if (number >= 100000) {
+			System.out.println("Please select a 5 digit number! ");
+		} else {
+			numsum = (number / 10000) + ((number % 10000) / 1000) + (((number % 10000) % 1000) / 100) + ((((number % 10000) % 1000) % 100) / 10) + (((((number % 10000) % 1000) % 100) % 10) / 1);
+		}
+		return numsum;
+	}
+	public static void printIfConsecutive(int num1, int num2, int num3) {
+		if (num1 + 1 == num2 || num2 + 1 == num3) {
+			System.out.println("The numbers are consecutive!");
+		} else {
+			System.out.println("The numbers are not consecutive!");
+		}
+	}
 	public static void main(String args[]) {
 		System.out.println("----------------------------------------");
 		Scanner sc = new Scanner(System.in);
