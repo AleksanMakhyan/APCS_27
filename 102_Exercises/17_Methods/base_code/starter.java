@@ -12,13 +12,18 @@ class starter {
 		return (year % 4 == 0);
 	}
 	public static int getDigitSum(int number) {
-		int numsum = 0;
+		int sum = 0;
 		if (number >= 100000) {
 			System.out.println("Please select a 5 digit number! ");
 		} else {
-			numsum = (number / 10000) + ((number % 10000) / 1000) + (((number % 10000) % 1000) / 100) + ((((number % 10000) % 1000) % 100) / 10) + (((((number % 10000) % 1000) % 100) % 10) / 1);
+		sum = 0;
+        while (number > 0) {
+            sum += number % 10; 
+            number = number / 10; 
+        }
+
 		}
-		return numsum;
+		return sum;
 	}
 	public static void printIfConsecutive(int num1, int num2, int num3) {
 		if (num1 + 1 == num2 || num2 + 1 == num3) {
