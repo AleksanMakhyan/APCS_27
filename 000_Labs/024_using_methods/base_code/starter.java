@@ -13,9 +13,50 @@ class starter {
 	static ArrayList<String> arr = new ArrayList<String>();
 
 	public static void main(String args[]) throws InterruptedException {
-		// Write your code here!
-
+		Scanner sc = new Scanner(System.in); 
+		int choice = 1;
+				while (choice == 1 || choice == 2 || choice == 3) {
+			System.out.println("Please select a mode (1 Recieve a random sentence, 2 Choose one of the 100 sentences, 3 quit)");
+			choice = sc.nextInt();
+			sc.nextLine();
 		
+		if (choice == 1) {
+			String givenSentence = getSentence();
+			System.out.println(givenSentence);
+			countdown();
+			startTimer();
+			String typedsentence = sc.nextLine();
+			double timer = endTimer();
+			System.out.println(compareSentences(givenSentence, typedsentence));
+			System.out.println(wordsInSentence(givenSentence));
+			System.out.println(lettersInSentence(givenSentence));
+		}
+		if (choice == 2) {
+			System.out.println("Which sentence number would you like to choose (1-100)");
+			int index = sc.nextInt();
+			sc.nextLine();
+			if (index <= 99 || index >= 0) {
+			String givenSentence = getSentence(index);
+			System.out.println(givenSentence);
+			countdown();
+			startTimer();
+			String typedsentence = sc.nextLine();
+			double timer = endTimer();
+			System.out.println(compareSentences(givenSentence, typedsentence));
+			System.out.println(wordsInSentence(givenSentence));
+			System.out.println(lettersInSentence(givenSentence));
+			}
+
+
+		}
+		if (choice == 3) {
+			System.out.println("Thanks for playing!");
+   		 	break;
+
+
+		}
+		System.out.println("The input recieved is not an accepted input please rerun the program and try again");
+	}
 	}
 
 	// This method returns the local current time as a String
