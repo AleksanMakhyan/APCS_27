@@ -20,6 +20,6 @@ class starter {
     }
 
     public static void main(String[] args) {
-        System.out.println(pow(10, 100));
+        System.out.println(pow(10,2));
     }
 }
