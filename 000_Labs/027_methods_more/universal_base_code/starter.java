@@ -13,5 +13,6 @@ class starter {
 		Charlie.displayAccountInfo();
 		John.displayAccountInfo();
 		Arthur.displayAccountInfo();
+	
 	}
 }
