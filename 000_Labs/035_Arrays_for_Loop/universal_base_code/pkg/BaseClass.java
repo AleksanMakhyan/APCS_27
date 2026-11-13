@@ -1,20 +1,19 @@
-/*
- *	Author:  
- *  Date: 
-*/
-
 package pkg;
-import java.util.Scanner;
-import java.util.Random;
-
 
 public class BaseClass {
-	int example = 0;
+    private int[] numbers;
 
-	public BaseClass() {
-		
-		
-	}
+    public BaseClass() {
+        numbers = new int[1000];
 
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = (int)(Math.random() * 1000);
+        }
+    }
+
+    public void printNumbers() {
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
 }
-
