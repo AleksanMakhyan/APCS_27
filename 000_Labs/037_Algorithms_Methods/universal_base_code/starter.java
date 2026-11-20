@@ -1,19 +1,17 @@
-/*
- *	Author:  
- *  Date: 
-*/
+import pkg.BaseClass;
 
-import pkg.*;
-import java.util.Scanner;
-import java.util.Random;
+public class starter {
+    public static void main(String[] args) {
+        int[] numbers = new int[100];
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = (int) (Math.random() * 100) + 1;
+        }
 
-
-class starter {
-	public static void main(String args[]) {
-		// Your code goes below here
-		BaseClass test = new BaseClass();
-
-
-		
-	}
+        BaseClass lab = new BaseClass();
+        System.out.println("Array:");
+        lab.toStringArray(numbers);
+        System.out.println("Average: " + lab.getArrayAverage(numbers));
+        System.out.println("Maximum: " + lab.getArrayMax(numbers));
+        System.out.println("Minimum: " + lab.getArrayMin(numbers));
+    }
 }
